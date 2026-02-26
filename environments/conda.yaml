@@ -1,0 +1,13 @@
+name: dp2-image-simulations
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - scipy
+  - scikit-learn
+  - stackvana
+  - matplotlib
+  - galsim
+  - galsim_extra
+  - pip:
+    - git+https://github.com/LSSTDESC/seacliff

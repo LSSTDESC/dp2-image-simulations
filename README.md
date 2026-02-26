@@ -12,6 +12,12 @@ Image simulations for shear calibration of DP2
 - Simulations will feature four shear configurations: positive/negative
   shear in both shear axes, centered at each cell
 
+## environments
+
+```bash
+mamba create -f environments/conda.yaml
+```
+
 
 # Notes from previous discussions
 
