@@ -1,0 +1,79 @@
+modules:
+  - seacliff
+  - galsim_extra
+
+input:
+  calexp:
+    file_name: "tests/data/cexp.fits.fz"
+
+image:
+  type: Scattered
+
+  random_seed: 4734138  # this seed sets the seed for everything above
+
+  size: 512
+
+  nobjects:
+    type: Random
+    min: 15
+    max: 30
+
+  wcs:
+    type: RubinSkyWCS
+    wcs: "$(@input.calexp).getWcs()"
+
+  noise:
+    type: RubinNoise
+    calexp: "$(@input.calexp)"
+
+
+psf:
+  type: RubinPSF
+  psf: "$(@input.calexp).getPsf()"
+  deconvolve_pixel: True
+
+gal:
+  type: Exponential
+  half_light_radius: 0.5
+  flux: '$10**(0.4*(30-18))'
+
+star:
+  type: Gaussian
+  sigma: 1.e-6
+  flux: '$10**(0.4*(30 - 10))'
+
+stamp:
+  type: MixedScene
+  objects:
+      # these are fractions of each kind of object
+      star: 0.2
+      gal: 0.8
+  draw_method: auto
+  shear:
+    type: G1G2
+    g1: 0.02
+    g2: 0.00
+
+  world_pos:
+    type: RADec
+    type: RADec
+    ra:
+      type: Degrees
+      theta:
+        type: Random
+        # min: "$ra_min_deg"
+        # max: "$ra_max_deg"
+        min: "$(@wcs).toWorld(galsim.PositionD(0, 0)).ra.deg"
+        max: "$(@wcs).toWorld(galsim.PositionD(512, 0)).ra.deg"
+    dec:
+      type: Radians
+      theta:
+        type: RandomDistribution
+        function: "math.cos(x)"  # Uniform on the sky means P(delta) ~ cos(delta)
+        # x_min: "$numpy.radians(dec_min_deg)"
+        # x_max: "$numpy.radians(dec_max_deg)"
+        x_min: "$(@wcs).toWorld(galsim.PositionD(0, 0)).dec.rad"
+        x_max: "$(@wcs).toWorld(galsim.PositionD(0, 512)).dec.rad"
+
+# output:
+#   file_name: out.fits

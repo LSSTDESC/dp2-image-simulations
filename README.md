@@ -18,6 +18,11 @@ Image simulations for shear calibration of DP2
 mamba create -f environments/conda.yaml
 ```
 
+## configs
+
+```bash
+galsim configs/simple.yaml
+```
 
 # Notes from previous discussions
 
