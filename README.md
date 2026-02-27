@@ -42,5 +42,5 @@ galsim configs/simple.yaml
 - <https://docs.google.com/presentation/d/1u0q9oo2bn0DyKU_4XiScut-W5GC0-V_wKrJYWQuxBaw/edit?usp=sharing>
 
 
-[^1]: <https://doi.org/10.1093/mnras/stab3055>
-[^2]: <https://doi.org/10.3847/1538-4365/ac7be6>
+[^1]: [Hartley et al. 2022](https://scixplorer.org/abs/2022MNRAS.509.3547H)
+[^2]: [Dal Tio et al. 2022](https://scixplorer.org/abs/2022ApJS..262...22D)
