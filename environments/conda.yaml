@@ -10,4 +10,4 @@ dependencies:
   - galsim
   - galsim_extra
   - pip:
-    - git+https://github.com/LSSTDESC/seacliff
+    - git+https://github.com/LSSTDESC/seacliff.git
