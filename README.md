@@ -26,7 +26,7 @@ galsim configs/simple.yaml
 
 # Notes from previous discussions
 
-- <https://docs.google.com/presentation/d/1u0q9oo2bn0DyKU_4XiScut-W5GC0-V_wKrJYWQuxBaw/edit?usp=sharing>
+- <https://docs.google.com/document/d/1sgeUwVdgq2OOlqe_OtPmwLn2D4RuV6gqI4Q2K29heVA/edit?usp=sharing>
 - <https://docs.google.com/presentation/d/1u0q9oo2bn0DyKU_4XiScut-W5GC0-V_wKrJYWQuxBaw/edit?usp=sharing>
 
 
