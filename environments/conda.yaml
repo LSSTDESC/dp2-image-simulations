@@ -2,12 +2,16 @@ name: dp2-image-simulations
 channels:
   - conda-forge
 dependencies:
-  - numpy
-  - scipy
-  - scikit-learn
-  - stackvana
-  - matplotlib
+  - dust_extinction
   - galsim
   - galsim_extra
+  - matplotlib
+  - numpy
+  - scikit-learn
+  - scipy
+  - stackvana
+  - pip < 24.1
   - pip:
+    - git+https://github.com/LSSTDESC/imSim.git
     - git+https://github.com/LSSTDESC/seacliff.git
+    - git+https://github.com/LSSTDESC/skyCatalogs.git
